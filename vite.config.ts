@@ -7,7 +7,7 @@ export default defineConfig({
   staged: {
     "*": "vp check --fix",
   },
-  fmt: {},
+  fmt: { sortTailwindcss: {} },
   lint: {
     plugins: ["react", "typescript", "oxc"],
     rules: {
