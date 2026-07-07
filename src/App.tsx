@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,10 +13,24 @@ function App() {
         id="center"
         className="flex grow flex-col place-content-center place-items-center gap-[18px] px-5 pt-8 pb-6 lg:gap-[25px] lg:p-0"
       >
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+        <div className="relative">
+          <img
+            src={heroImg}
+            className="relative inset-x-0 z-0 mx-auto w-[170px]"
+            width="170"
+            height="179"
+            alt=""
+          />
+          <img
+            src={reactLogo}
+            className={`absolute inset-x-0 top-[34px] z-[1] mx-auto h-[28px] ${styles.framework}`}
+            alt="React logo"
+          />
+          <img
+            src={viteLogo}
+            className={`absolute inset-x-0 top-[107px] z-0 mx-auto h-[26px] w-auto ${styles.vite}`}
+            alt="Vite logo"
+          />
         </div>
         <div>
           <h1>Get started</h1>
